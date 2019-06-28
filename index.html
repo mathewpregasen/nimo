@@ -1,0 +1,311 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/ipx8byq.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://kit.fontawesome.com/935098507c.js"></script>
+
+
+</head>
+<body>
+  <style>
+    body {
+    margin:0px;
+    padding: 0px;
+    }
+
+    section[name="main"]{
+    background:url('./bg.jpg');
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    height:100vh;
+    display:inline-block;
+    }
+
+    section[name="main"] > .video {
+      float:right;
+      display:inline-block;
+      width: 500px;
+      height:100vh;
+      background-color:rgba(255,255,255,.94);
+      padding-left:40px;
+      padding-right:40px;
+      box-sizing:border-box;
+    }
+
+    section[name="main"] > .video > h1{
+      font-family: 'Dancing Script', cursive;
+      color:#ecaa87;
+      font-size: 50px;
+      margin-bottom:12px;
+
+      width:100%;
+      text-align:center;
+
+      display:inline-block;
+
+    }
+
+    section[name="main"] > .video > h2 {
+      font-family: "Montserrat", Helvetica, Arial;
+      color:#222;
+      font-weight:100;
+      font-size: 20px;
+      margin-top:0px;
+      font-family: proxima-nova, sans-serif;
+      font-style: normal;
+
+      width:80%;
+      border-top:1px #222 solid;
+      border-bottom:1px #222 solid;
+      text-align:center;
+      margin-left:10%;
+      padding: 14px 0px;
+
+    }
+
+    section[name="main"] > .video > h3 {
+      color:#222;
+      font-weight:600;
+      font-size: 15px;
+      letter-spacing:3px;
+      margin-top:40px;
+      width:100%;
+      text-align:center;
+      font-family: proxima-nova, sans-serif;
+      font-style: normal;
+
+    }
+
+    section[name="main"] > .video > h4 {
+      color:#222;
+      font-weight:300;
+      font-size: 18px;
+      margin-top:30px;
+      width:100%;
+      text-align:center;
+      font-family: proxima-nova, sans-serif;
+      font-style: normal;
+
+    }
+
+    section[name="main"] > .video > .options {
+      width: 80%;
+      display:inline-block;
+      height: 80px;
+      margin-top:00px;
+      margin-left:10%;
+      font-family: proxima-nova, sans-serif;
+      text-align:center;
+    }
+
+    section[name="main"] > .video > .options > .option {
+      background-color:black;
+      color:white;
+      font-weight: 600;
+      padding: 10px 34px;
+      font-size:11px;
+      letter-spacing:3px;
+
+      border-radius: 4px;
+      display:inline-block;
+      margin:0px 8px;
+      cursor:pointer;
+    }
+
+    section[name="main"] > .video > .options > .option:hover {
+      opacity:.8;
+    }
+
+    section[name="main"] > .video > .options > .option.yes {
+      background-color:#ecaa87;
+    }
+  </style>
+  <style>
+    #myForm {
+      width: 80%;
+      display:inline-block;
+      margin-left:10%;
+      margin-right:10%;
+      font-family: proxima-nova, sans-serif;
+      text-align:center;
+    }
+
+    #myForm > label {
+      width: 100%;
+      text-align:center;
+      margin-bottom:4px;
+      display:inline-block;
+      font-size: 13px;
+margin-bottom: -13px;
+    }
+
+    #myForm > input#name {
+      width: 80%;
+      margin-left:0%;
+      background-color:transparent;
+      border:none;
+      border-bottom:2px black solid;
+      text-align:center;
+      outline:none;
+    margin-bottom: 21px;
+    font-size:16px;
+    }
+
+        #myForm > input[type="file"] {
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: 69px;
+      }
+    #myForm > input#submit {
+      background-color:#ecaa87;
+      color:white;
+      font-weight: 600;
+      border:none;
+      padding: 10px 34px;
+      font-size:11px;
+      border-radius: 4px;
+      display:inline-block;
+      margin:0px 8px;
+      letter-spacing:3px;
+      cursor:pointer;
+    }
+
+    .phoneAnimation {
+      display: inline-block;
+      width: 100%;
+      margin-top: -3px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(90deg);
+        } to {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        } to {
+            opacity: 1;
+        }
+    }
+
+    .phoneAnimation > .iphone {
+      width:100px;
+      transform: rotate(90deg);
+      height: 100px;
+      display:inline-block;
+      background: url('./iphone.png');
+      background-size:contain;
+      animation-name: spin;
+     animation-duration: 1200ms;
+     animation-delay: 1s;
+     animation-iteration-count: 1;
+     animation-timing-function: linear;
+animation-fill-mode: forwards;
+
+
+    }
+
+    .phoneAnimation > .iphone > i {
+      margin-top: 37px;
+      color: lightgreen;
+      border-radius: 100%;
+      border: 2px lightgreen solid;
+      padding: 4px;
+      animation-name: fadein;
+      opacity:0;
+      animation-duration: 100ms;
+      animation-delay: 2300ms;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  </style>
+  <section name="main" id="nimo">
+    <div class="video">
+      <h1>Submit a Video</h1>
+      <h2>
+        We know that not everyone could make our wedding, but you all have been a part of our life
+        so we still want you to be a part of our wedding.
+      </h2>
+
+
+      <h3 v-if="stage == 'pre'">WANT TO PARTICIPATE?</h3>
+      <div class="options" v-if="stage == 'pre'">
+        <div class="option yes" v-on:click="stage = 'film'">GET STARTED</div>
+      </div>
+
+
+      <h3 v-if="stage == 'film'">LET'S FILM FIRST?</h3>
+      <h4 v-if="stage == 'film'">
+        Please take a 10-15 second video <b>vertically</b> with your phone using your stock camera app.
+      </h4>
+
+      <div class="phoneAnimation" v-if="stage == 'film'">
+        <div class="iphone">
+          <i class="fa fa-check"></i>
+        </div>
+      </div>
+
+      <div class="options" v-if="stage == 'film'">
+        <div class="option yes" v-on:click="stage = 'poll'">DONE. NEXT STEP.</div>
+      </div>
+
+      <h3 v-if="stage == 'poll'">IMESSAGE?</h3>
+      <h4 v-if="stage == 'poll'">
+        Do you use iMessage on your phone?
+      </h4>
+      <div class="options" v-if="stage == 'poll'">
+        <div class="option yes" v-on:click="stage = 'iphone'">YES</div>
+        <div class="option" v-on:click="stage = 'upload'">NO</div>
+      </div>
+
+      <h3 v-if="stage == 'iphone'">GREAT! EASY FOR YOU.</h3>
+      <h4 v-if="stage == 'iphone'">
+        Simply text a video submission to:<br><br> <b>+1 (407) 466-9725</b>
+      </h4>
+      <div class="options" v-if="stage == 'iphone'">
+        <div class="option" v-on:click="stage = 'poll'">GO BACK</div>
+      </div>
+
+
+      <h3 v-if="stage == 'upload'">UPLOAD A VIDEO</h3>
+
+
+      <form id="myForm" v-if="stage == 'upload'">
+          <input type="text" name="myName" placeholder="Your Name" id="name">
+
+          <label>Pick a file</label>
+          <br><br>
+          <input type="file" name="myFile">
+
+          <input type="submit" value="UPLOAD" id="submit"
+                     onclick="google.script.run
+                              .uploadFiles(this.parentNode);
+                              return false;">
+
+
+  </form>
+
+  <div class="options" v-if="stage == 'upload'">
+    <div class="option" v-on:click="stage = 'poll'">GO BACK</div>
+  </div>
+    </div>
+  </section>
+  <script>
+    var app = new Vue({
+      el: '#nimo',
+      data: {
+        stage: 'pre',
+      }
+    })
+  </script>
+</body>
+</html>
