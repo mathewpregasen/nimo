@@ -1,6 +1,6 @@
 <html>
 <head>
-  <!-- Ⓗ --> 
+  <!-- Ⓗ -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/ipx8byq.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -254,8 +254,8 @@ background-color:white;
     <div class="video">
       <h1>Submit a Video</h1>
       <h2>
-        We know that not everyone could make our wedding, but you all have been a part of our life
-        so we still want you to be a part of our wedding.
+        While we know that not everyone could make our wedding, all of you have been a part of our lives.
+        So we've found a way for you to be still part of our ceremony.
       </h2>
 
 
@@ -298,23 +298,15 @@ background-color:white;
       </div>
 
 
-      <h3 v-if="stage == 'upload'">UPLOAD A VIDEO</h3>
+      <h3 v-if="stage == 'upload'">UPLOAD THE VIDEO TO YOUTUBE OR GOOGLE DRIVE/DROPBOX/WETRANSFER</h3>
 
+      <h4 v-if="stage == 'upload'">
+        Text a shareable link of the submission to <br><br><b>+1 (407) 466-9725</b>.
+        <br><br>
+        If the video is being uploaded to Youtube, we recommend you use the <b>unlisted</b> setting. Do <b>not</b> use private
+        as we won't be able to access it then.
+      </h4>
 
-      <form id="myForm" v-if="stage == 'upload'">
-          <input type="text" name="myName" placeholder="Your Name" id="name">
-
-          <label>Pick a file</label>
-          <br><br>
-          <input type="file" name="myFile">
-
-          <input type="submit" value="UPLOAD" id="submit"
-                     onclick="google.script.run
-                              .uploadFiles(this.parentNode);
-                              return false;">
-
-
-  </form>
 
   <div class="options" v-if="stage == 'upload'">
     <div class="option" v-on:click="stage = 'poll'">GO BACK</div>
